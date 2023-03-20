@@ -13,25 +13,47 @@ const initdb = async () =>
   });
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
+// Code in following used from module 19/PWA mini project
 export const putDb = async (content) => {
-  const notifiedDb = await openDB('jate', 1);
-
-  const request = notifiedDb.transaction('jate', 'readwrite').objectStore('jate').add({ id: 1, value: content });
-
+  console.log('PUT to the database');
+  
+  // Create a connection to the database database and version we want to use.
+  const contactDb = await openDB('jate', 1);
+  
+  // Create a new transaction and specify the database and data privileges.
+  const tx = contactDb.transaction('jate', 'readwrite');
+  
+  // Open up the desired object store.
+  const store = tx.objectStore('jate');
+  
+  // Use the .add() method on the store and pass in the content.
+  const request = store.put({ id: 1, value: content });
+  
+  // Get confirmation of the request.
   const result = await request;
-
-  console.log('Data saved to database', result);
+  console.log('🚀 - data saved to the database', result);
 };
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
-  const notifiedDb = await openDB('jate', 1);
-
-  const request = notifiedDb.transaction('jate', 'readonly').objectStore('jate').getAll();
-
+  console.log('GET from the database');
+  
+  // Create a connection to the database database and version we want to use.
+  const contactDb = await openDB('jate', 1);
+  
+  // Create a new transaction and specify the database and data privileges.
+  const tx = contactDb.transaction('jate', 'readonly');
+  
+  // Open up the desired object store.
+  const store = tx.objectStore('jate');
+  
+  // Use the .getAll() method to get all data in the database.
+  const request = store.getAll();
+  
+  // Get confirmation of the request.
   const result = await request;
-
-  return result;
+  console.log('result.value', result);
+  return result.value;
 };
 
 initdb();
