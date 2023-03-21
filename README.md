@@ -16,7 +16,7 @@
   
   Try [Notified Here!](https://notified.herokuapp.com/)
 
-  ![Just Another Text Editor](./images/JATE screenshot.jpg)
+  ![Just Another Text Editor](/images/JATE screenshot.jpg)
 
   ## License
 
