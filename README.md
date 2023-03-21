@@ -16,6 +16,8 @@
   
   Try [Notified Here!](https://notified.herokuapp.com/)
 
+  ![Just Another Text Editor](./images/JATE screenshot.jpg)
+
   ## License
 
   This project is licensed under BSD 3-Clause. For more information (if applicable), please click the following button to learn more:
