@@ -14,7 +14,7 @@
 
   Navigate to the application web page (link below) to use Notified online. Click the Install! button in the upper left corner to download the application for offline useage and then use it as you would any javascript text editor!
   
-  [Try Notified Here!](https://notified.herokuapp.com/)
+  Try [Notified Here!](https://notified.herokuapp.com/)
 
   ## License
 
