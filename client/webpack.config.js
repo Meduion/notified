@@ -31,9 +31,11 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Notified',
-        short_name: 'Notified',
+        name: 'Just Another Text Editor',
+        short_name: 'JATE',
         description: 'Your online note taking helper',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
         start_url: './',
         publicPath: './',
         icons: [
